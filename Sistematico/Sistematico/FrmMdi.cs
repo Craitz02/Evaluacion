@@ -16,5 +16,10 @@ namespace Sistematico
         {
             InitializeComponent();
         }
+
+        private void productoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

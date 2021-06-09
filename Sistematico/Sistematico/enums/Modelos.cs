@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace Sistematico.enums
 {
-    class Modelos
+    public enum Modelos
     {
+        SERIE_S,
+        SERIE_A,
+        SEIS,
+        SIETE,
+        OCHO,
+        NUEVE,
+        DIEZ,
+        
+
     }
 }

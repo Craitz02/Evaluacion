@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace Sistematico.enums
 {
-    class Marcas
+    public enum Marcas
     {
+        XIAOMI,
+        SAMSUNG,
+        APPLE,
+        GOOGLE,
+        NOKIA,
+        MOTOROLA,
+        ALCATEL,
     }
 }
