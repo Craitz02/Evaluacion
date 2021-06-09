@@ -1,0 +1,10 @@
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\bin\Debug\Sistematico.exe.config
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\bin\Debug\Sistematico.exe
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\bin\Debug\Sistematico.pdb
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.csprojAssemblyReference.cache
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.FrmMdi.resources
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.Properties.Resources.resources
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.csproj.GenerateResource.cache
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.csproj.CoreCompileInputs.cache
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.exe
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.pdb
