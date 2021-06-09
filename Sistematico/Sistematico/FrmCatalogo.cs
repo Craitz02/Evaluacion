@@ -24,7 +24,8 @@ namespace Sistematico
             FrmProducto frmProducto = new FrmProducto();
             frmProducto.Productos = Productos;
             frmProducto.Show();
-
+            dgvCatalogo.DataSource = null;
+            dgvCatalogo.DataSource = Productos;
         }
     }
 }

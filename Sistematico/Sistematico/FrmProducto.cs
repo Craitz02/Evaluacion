@@ -34,49 +34,65 @@ namespace Sistematico
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            string nombre = txtNombre.Text;
+            int indexMarca = cmbMarca.SelectedIndex;
+            Marcas marca = (Marcas)Enum.GetValues(typeof(Marcas)).GetValue(indexMarca);
+            int indexModelo = cmbModelo.SelectedIndex;
+            Modelos modelo = (Modelos)Enum.GetValues(typeof(Modelos)).GetValue(indexModelo);
+            string descripcion = txtDescripcion.Text;
+            string imagen = txtImagen.Text;
+            ValidateProducto(out int id,nombre, out int existencia, out decimal precio, descripcion, imagen);
 
+            Producto p = new Producto {
+                Id = id,
+                Nombre = nombre,
+                Existencia = existencia,
+                Marca = marca,
+                Modelo= modelo,
+                Precio= precio,
+                Descripcion= descripcion,
+                Imagen=imagen,
+
+
+
+            };
+            Productos.Add(p);
+            
+
+            
         }
 
-        private void ValidateEmpleado(out int id,string nombre, out int existencia, string marca, string modelo, out decimal precio, string descripcion,string imagen)
+        private void ValidateProducto(out int id,string nombre, out int existencia, out decimal precio, string descripcion,string imagen)
         {
             if (!int.TryParse(txtID.Text, out int i))
             {
-                throw new ArgumentException($"El valor \"{txtSalario.Text}\" es invalido!");
+                throw new ArgumentException($"El valor \"{txtID.Text}\" es invalido!");
             }
             id = i;
             if (string.IsNullOrWhiteSpace(nombre))
             {
                 throw new ArgumentException("El nombre es requerido!");
             }
-            if (string.IsNullOrWhiteSpace(apellido))
+            if (!int.TryParse(txtExistencia.Text, out int exi))
             {
-                throw new ArgumentException("El apellido es requerido!");
+                throw new ArgumentException($"El valor \"{txtExistencia.Text}\" es invalido!");
             }
-            if (string.IsNullOrWhiteSpace(cedula))
+            existencia= exi;
+            if (!int.TryParse(txtPrecio.Text, out int p))
             {
-                throw new ArgumentException("La cedula es requerido!");
+                throw new ArgumentException($"El valor \"{txtPrecio.Text}\" es invalido!");
             }
-            if (string.IsNullOrWhiteSpace(telefono))
+            precio= p;
+            if (string.IsNullOrWhiteSpace(descripcion))
             {
-                throw new ArgumentException("El telefono es requerido!");
+                throw new ArgumentException("La descri´pcion es requerida!");
             }
-            if (ValidateTelefono(telefono))
+            if (string.IsNullOrWhiteSpace(imagen))
             {
-                throw new ArgumentException("El telefono no tiene una estructura valida!");
+                throw new ArgumentException("La imagen es requerida!");
             }
-            if (string.IsNullOrWhiteSpace(correo))
-            {
-                throw new ArgumentException("El correo es requerido!");
-            }
-            if (!ValidateCorreo(correo))
-            {
-                throw new ArgumentException("El correo no tiene una estructura valida!");
-            }
-            if (!decimal.TryParse(txtSalario.Text, out decimal s))
-            {
-                throw new ArgumentException($"El valor \"{txtSalario.Text}\" es invalido!");
-            }
-            salario = s;
+
+           
         }
     }
 }
