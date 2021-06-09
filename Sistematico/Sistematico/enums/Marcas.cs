@@ -8,12 +8,8 @@ namespace Sistematico.enums
 {
     public enum Marcas
     {
-        XIAOMI,
+        
         SAMSUNG,
         APPLE,
-        GOOGLE,
-        NOKIA,
-        MOTOROLA,
-        ALCATEL,
     }
 }

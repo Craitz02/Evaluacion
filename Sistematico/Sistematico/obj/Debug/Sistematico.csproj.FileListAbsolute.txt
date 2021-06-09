@@ -8,3 +8,6 @@ C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematic
 C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.csproj.CoreCompileInputs.cache
 C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.exe
 C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.pdb
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.FrmCatalogo.resources
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.FrmProducto.resources
+C:\Users\Sistemas-11\Desktop\Prueba\Sistematico\Sistematico\obj\Debug\Sistematico.FrmView.resources
