@@ -38,6 +38,7 @@ namespace Sistematico
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Name = "FrmView";
             this.Text = "View Producto";
+            this.Load += new System.EventHandler(this.FrmView_Load);
             this.ResumeLayout(false);
 
         }

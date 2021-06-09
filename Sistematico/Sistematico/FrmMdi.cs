@@ -27,5 +27,13 @@ namespace Sistematico
             frmCatalogo.MdiParent = this;
             frmCatalogo.Show();
         }
+
+        private void productoToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            FrmView frmView = new FrmView();
+            frmView.Productos = productos;
+            frmView.MdiParent = this;
+            frmView.Show();
+        }
     }
 }
