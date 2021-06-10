@@ -34,5 +34,42 @@ namespace Sistematico
             dgvCatalogo.DataSource = null;
             dgvCatalogo.DataSource = Productos;
         }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (dgvCatalogo.Rows.Count == 0)
+            {
+                return;
+            }
+            int index = dgvCatalogo.CurrentCell.RowIndex;
+           Productos.RemoveAt(index);
+
+            dgvCatalogo.DataSource = null;
+            dgvCatalogo.DataSource = Productos;
+        }
+
+        private void txtFiltrar_TextChanged(object sender, EventArgs e)
+        {
+             if ( dgvCatalogo== null)
+            {
+                return;
+            }
+            List<Producto> filtro = new List<Producto();
+            string clave = txtFiltrar.Text;
+            foreach (Producto p in Productos)
+            {
+                if ((p.Id + "").Contains(clave) || p.Nombre.Contains(clave) || ((p.Existencia + "").Contains(clave) ||((p.Precio + "").Contains(clave)
+                    || p.Descripcion.Contains(clave) || 
+                {
+                    filtro.Add(p);
+                }
+                if (filtro.Count > 0)
+                {
+                    dgvCatalogo.DataSource = null;
+                    dgvCatalogo.DataSource = filtro;
+                }
+            }
+            
+        }
     }
 }

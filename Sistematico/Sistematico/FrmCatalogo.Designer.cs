@@ -52,6 +52,7 @@ namespace Sistematico
             this.txtFiltrar.Name = "txtFiltrar";
             this.txtFiltrar.Size = new System.Drawing.Size(455, 22);
             this.txtFiltrar.TabIndex = 0;
+            this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
             // dgvCatalogo
             // 
@@ -115,6 +116,7 @@ namespace Sistematico
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnRefresh
             // 
