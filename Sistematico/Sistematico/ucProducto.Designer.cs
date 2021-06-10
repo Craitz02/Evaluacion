@@ -43,7 +43,7 @@ namespace Sistematico
             // 
             this.pbImagenProducto.Location = new System.Drawing.Point(17, 27);
             this.pbImagenProducto.Name = "pbImagenProducto";
-            this.pbImagenProducto.Size = new System.Drawing.Size(236, 131);
+            this.pbImagenProducto.Size = new System.Drawing.Size(255, 150);
             this.pbImagenProducto.TabIndex = 0;
             this.pbImagenProducto.TabStop = false;
             // 
@@ -105,6 +105,7 @@ namespace Sistematico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MistyRose;
             this.Controls.Add(this.lblDescripcion);
             this.Controls.Add(this.lblMarca);
             this.Controls.Add(this.lblModelo);
@@ -113,7 +114,7 @@ namespace Sistematico
             this.Controls.Add(this.lblID);
             this.Controls.Add(this.pbImagenProducto);
             this.Name = "ucProducto";
-            this.Size = new System.Drawing.Size(267, 345);
+            this.Size = new System.Drawing.Size(290, 345);
             this.Load += new System.EventHandler(this.ucProducto_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbImagenProducto)).EndInit();
             this.ResumeLayout(false);
