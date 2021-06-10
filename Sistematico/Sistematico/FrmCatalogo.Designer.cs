@@ -36,7 +36,6 @@ namespace Sistematico
             this.btnNuevo = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogo)).BeginInit();
             this.flowLayoutPanel1.SuspendLayout();
@@ -47,10 +46,9 @@ namespace Sistematico
             this.txtFiltrar.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtFiltrar.Location = new System.Drawing.Point(128, 16);
-            this.txtFiltrar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFiltrar.Location = new System.Drawing.Point(96, 13);
             this.txtFiltrar.Name = "txtFiltrar";
-            this.txtFiltrar.Size = new System.Drawing.Size(455, 22);
+            this.txtFiltrar.Size = new System.Drawing.Size(342, 20);
             this.txtFiltrar.TabIndex = 0;
             this.txtFiltrar.TextChanged += new System.EventHandler(this.txtFiltrar_TextChanged);
             // 
@@ -61,11 +59,10 @@ namespace Sistematico
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCatalogo.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
             this.dgvCatalogo.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCatalogo.Location = new System.Drawing.Point(17, 48);
-            this.dgvCatalogo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvCatalogo.Location = new System.Drawing.Point(13, 39);
             this.dgvCatalogo.Name = "dgvCatalogo";
             this.dgvCatalogo.RowHeadersWidth = 51;
-            this.dgvCatalogo.Size = new System.Drawing.Size(581, 233);
+            this.dgvCatalogo.Size = new System.Drawing.Size(436, 189);
             this.dgvCatalogo.TabIndex = 1;
             // 
             // flowLayoutPanel1
@@ -76,21 +73,18 @@ namespace Sistematico
             this.flowLayoutPanel1.Controls.Add(this.btnNuevo);
             this.flowLayoutPanel1.Controls.Add(this.btnActualizar);
             this.flowLayoutPanel1.Controls.Add(this.btnEliminar);
-            this.flowLayoutPanel1.Controls.Add(this.btnRefresh);
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(17, 289);
-            this.flowLayoutPanel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(13, 235);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(581, 54);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(436, 44);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // btnNuevo
             // 
             this.btnNuevo.Image = ((System.Drawing.Image)(resources.GetObject("btnNuevo.Image")));
             this.btnNuevo.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnNuevo.Location = new System.Drawing.Point(4, 4);
-            this.btnNuevo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnNuevo.Location = new System.Drawing.Point(3, 3);
             this.btnNuevo.Name = "btnNuevo";
-            this.btnNuevo.Size = new System.Drawing.Size(100, 28);
+            this.btnNuevo.Size = new System.Drawing.Size(75, 23);
             this.btnNuevo.TabIndex = 0;
             this.btnNuevo.Text = "    Nuevo";
             this.btnNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -99,56 +93,44 @@ namespace Sistematico
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(112, 4);
-            this.btnActualizar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnActualizar.Location = new System.Drawing.Point(84, 3);
             this.btnActualizar.Name = "btnActualizar";
-            this.btnActualizar.Size = new System.Drawing.Size(100, 28);
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
             this.btnActualizar.TabIndex = 1;
             this.btnActualizar.Text = "Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(220, 4);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnEliminar.Location = new System.Drawing.Point(165, 3);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(100, 28);
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
             this.btnEliminar.TabIndex = 2;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(328, 4);
-            this.btnRefresh.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(125, 28);
-            this.btnRefresh.TabIndex = 3;
-            this.btnRefresh.Text = "Refrescar";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.Location = new System.Drawing.Point(-27, 19);
+            this.label1.Location = new System.Drawing.Point(-20, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(148, 17);
+            this.label1.Size = new System.Drawing.Size(112, 13);
             this.label1.TabIndex = 3;
             this.label1.Text = "                       Buscar:";
             // 
             // FrmCatalogo
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(615, 358);
+            this.ClientSize = new System.Drawing.Size(461, 291);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.dgvCatalogo);
             this.Controls.Add(this.txtFiltrar);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmCatalogo";
             this.Text = "Catalogo Producto";
             ((System.ComponentModel.ISupportInitialize)(this.dgvCatalogo)).EndInit();
@@ -166,7 +148,6 @@ namespace Sistematico
         private System.Windows.Forms.Button btnNuevo;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label label1;
     }
 }

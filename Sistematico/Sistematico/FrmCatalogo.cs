@@ -24,16 +24,13 @@ namespace Sistematico
             
             FrmProducto frmProducto = new FrmProducto();
             frmProducto.Productos = Productos;
+            frmProducto.dgvP = dgvCatalogo;
             _ = frmProducto.ShowDialog();
 
 
         }
 
-        private void btnRefresh_Click(object sender, EventArgs e)
-        {
-            dgvCatalogo.DataSource = null;
-            dgvCatalogo.DataSource = Productos;
-        }
+        
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -54,12 +51,11 @@ namespace Sistematico
             {
                 return;
             }
-            List<Producto> filtro = new List<Producto();
+            List<Producto> filtro = new List<Producto>();
             string clave = txtFiltrar.Text;
             foreach (Producto p in Productos)
             {
-                if ((p.Id + "").Contains(clave) || p.Nombre.Contains(clave) || ((p.Existencia + "").Contains(clave) ||((p.Precio + "").Contains(clave)
-                    || p.Descripcion.Contains(clave) || 
+                if ((p.Id + "").Contains(clave) || p.Nombre.Contains(clave) || (p.Existencia + "").Contains(clave) || (p.Precio + "").Contains(clave))
                 {
                     filtro.Add(p);
                 }
@@ -70,6 +66,27 @@ namespace Sistematico
                 }
             }
             
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            if(dgvCatalogo.Rows.Count == 0)
+            {
+                MessageBox.Show("Debe agregar productos a la tabla");
+                return;
+            }
+            if(dgvCatalogo.CurrentCell.RowIndex < 0)
+            {
+                MessageBox.Show("Debe seleccionar una fila de la tabla");
+                return;
+            }
+            int index = dgvCatalogo.CurrentCell.RowIndex;
+            FrmProducto frmProducto = new FrmProducto();
+            frmProducto.Productos = Productos;
+            frmProducto.dgvP = dgvCatalogo;
+            frmProducto.LoadProducto(index);
+            frmProducto.editable = true;
+            _ = frmProducto.ShowDialog();
         }
     }
 }

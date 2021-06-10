@@ -14,7 +14,11 @@ namespace Sistematico
 {
     public partial class FrmProducto : Form
     {
+        
         public List<Producto> Productos { get; set; }
+        public Boolean editable = false;
+        private int RowIndex = -1;
+        public DataGridView dgvP;
         //public FrmCatalogo frmCatalogo = new FrmCatalogo();
         public FrmProducto()
         {
@@ -35,6 +39,15 @@ namespace Sistematico
 
         private void btnAceptar_Click(object sender, EventArgs e)
         {
+            int id;
+            if (Productos.Count==0)
+            {
+                id = 1;
+            }
+            else
+            {
+                id = Productos.Last<Producto>().Id + 1;
+            }
             string nombre = txtNombre.Text;
             int indexMarca = cmbMarca.SelectedIndex;
             Marcas marca = (Marcas)Enum.GetValues(typeof(Marcas)).GetValue(indexMarca);
@@ -42,7 +55,7 @@ namespace Sistematico
             Modelos modelo = (Modelos)Enum.GetValues(typeof(Modelos)).GetValue(indexModelo);
             string descripcion = txtDescripcion.Text;
             string imagen = txtImagen.Text;
-            ValidateProducto(out int id,nombre, out int existencia, out decimal precio, descripcion, imagen);
+            ValidateProducto(nombre, out int existencia, out decimal precio, descripcion, imagen);
 
             Producto p = new Producto {
                 Id = id,
@@ -54,24 +67,34 @@ namespace Sistematico
                 Descripcion= descripcion,
                 Imagen=imagen,
             };
-            Productos.Add(p);
+            if(editable && RowIndex != -1)
+            {
+                Producto pr = Productos.ElementAt(RowIndex);
+                pr.Nombre = txtNombre.Text;
+                pr.Existencia = existencia;
+                pr.Marca = marca;
+                pr.Modelo = modelo;
+                pr.Precio = precio;
+                pr.Descripcion = descripcion;
+                pr.Imagen = imagen;
+                RowIndex = -1;
 
+                MessageBox.Show("Producto actualizado satisfactoriamente");
+            }
+            else
+            {
+                Productos.Add(p);
+                MessageBox.Show("Producto agregado satisfactoriamente");
+            }
+            dgvP.DataSource = null;
+            dgvP.DataSource = Productos;
+            dgvP.Refresh();
             Close();
-
-            
-           
-
-
-
         }
 
-        private void ValidateProducto(out int id,string nombre, out int existencia, out decimal precio, string descripcion,string imagen)
+        private void ValidateProducto(string nombre, out int existencia, out decimal precio, string descripcion,string imagen)
         {
-            if (!int.TryParse(txtID.Text, out int i))
-            {
-                throw new ArgumentException($"El valor \"{txtID.Text}\" es invalido!");
-            }
-            id = i;
+            
             if (string.IsNullOrWhiteSpace(nombre))
             {
                 throw new ArgumentException("El nombre es requerido!");
@@ -81,7 +104,7 @@ namespace Sistematico
                 throw new ArgumentException($"El valor \"{txtExistencia.Text}\" es invalido!");
             }
             existencia= exi;
-            if (!int.TryParse(txtPrecio.Text, out int p))
+            if (!decimal.TryParse(txtPrecio.Text, out decimal p))
             {
                 throw new ArgumentException($"El valor \"{txtPrecio.Text}\" es invalido!");
             }
@@ -96,6 +119,28 @@ namespace Sistematico
             }
 
            
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog Imagen = new OpenFileDialog();
+            if (Imagen.ShowDialog() == DialogResult.OK)
+            {
+                txtImagen.Text = Imagen.FileName;
+            }
+        }
+
+        public void LoadProducto(int i)
+        {
+            Producto p = Productos.ElementAt(i);
+            txtNombre.Text = p.Nombre;
+            txtExistencia.Text = p.Existencia + "";
+            //cmbModelo.SelectedIndex = 0;
+            //cmbMarca.SelectedIndex = 0;
+            txtPrecio.Text = p.Precio + "";
+            txtDescripcion.Text = p.Descripcion;
+            txtImagen.Text = p.Imagen;
+            RowIndex = i;
         }
     }
 }
