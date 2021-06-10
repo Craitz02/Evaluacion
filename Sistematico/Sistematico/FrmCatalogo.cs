@@ -21,9 +21,16 @@ namespace Sistematico
 
         private void btnNuevo_Click(object sender, EventArgs e)
         {
+            
             FrmProducto frmProducto = new FrmProducto();
             frmProducto.Productos = Productos;
-            frmProducto.Show();
+            _ = frmProducto.ShowDialog();
+
+
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
             dgvCatalogo.DataSource = null;
             dgvCatalogo.DataSource = Productos;
         }

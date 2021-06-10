@@ -15,6 +15,7 @@ namespace Sistematico
     public partial class FrmProducto : Form
     {
         public List<Producto> Productos { get; set; }
+        //public FrmCatalogo frmCatalogo = new FrmCatalogo();
         public FrmProducto()
         {
             InitializeComponent();
@@ -52,14 +53,16 @@ namespace Sistematico
                 Precio= precio,
                 Descripcion= descripcion,
                 Imagen=imagen,
-
-
-
             };
             Productos.Add(p);
-            
+
+            Close();
 
             
+           
+
+
+
         }
 
         private void ValidateProducto(out int id,string nombre, out int existencia, out decimal precio, string descripcion,string imagen)
