@@ -50,3 +50,4 @@ C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\obj
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.exe.config
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.exe
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.pdb
+C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.ucProducto.resources

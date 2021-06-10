@@ -55,7 +55,8 @@ namespace Sistematico
             string clave = txtFiltrar.Text;
             foreach (Producto p in Productos)
             {
-                if ((p.Id + "").Contains(clave) || p.Nombre.Contains(clave) || (p.Existencia + "").Contains(clave) || (p.Precio + "").Contains(clave))
+                if ((p.Id + "").ToUpper().Contains(clave) || p.Nombre.ToUpper().Contains(clave) || (p.Existencia + "").ToUpper().Contains(clave) 
+                        || (p.Precio + "").ToUpper().Contains(clave)|| p.Descripcion.ToUpper().Contains(clave) || p.Imagen.ToUpper().Contains(clave))
                 {
                     filtro.Add(p);
                 }

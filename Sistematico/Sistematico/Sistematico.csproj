@@ -75,6 +75,12 @@
     <Compile Include="poco\Producto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ucProducto.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucProducto.Designer.cs">
+      <DependentUpon>ucProducto.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="FrmCatalogo.resx">
       <DependentUpon>FrmCatalogo.cs</DependentUpon>
     </EmbeddedResource>
@@ -96,6 +102,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="ucProducto.resx">
+      <DependentUpon>ucProducto.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
