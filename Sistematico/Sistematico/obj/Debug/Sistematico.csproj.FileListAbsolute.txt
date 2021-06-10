@@ -51,3 +51,17 @@ C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.exe
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.pdb
 C:\Users\rodri\OneDrive\Escritorio\prueba\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.ucProducto.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.exe.config
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.exe
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\bin\Debug\Sistematico.pdb
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.csprojAssemblyReference.cache
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.FrmCatalogo.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.FrmMdi.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.FrmProducto.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.FrmView.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.Properties.Resources.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.ucProducto.resources
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.csproj.GenerateResource.cache
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.csproj.CoreCompileInputs.cache
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.exe
+C:\Users\Sistemas-12\Desktop\siste\Evaluacion\Sistematico\Sistematico\obj\Debug\Sistematico.pdb
